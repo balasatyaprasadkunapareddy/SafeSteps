@@ -1,17 +1,41 @@
-# trafficsafe
+# SafeSteps 🚸
 
-A new Flutter project.
+**SafeSteps** is a modern, cross-platform road safety awareness and educational application designed for students and young commuters. Built with **Flutter** and powered by **Firebase Firestore**, it delivers interactive lessons, real-time survey insights, gamified quizzes, and dynamic achievement tracking.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- 📱 **Cross-Platform & Responsive:** Seamlessly adapts UI layout across Android, iOS, Windows, and Web.
+  - *Mobile:* Clean bottom navigation bar for quick thumb navigation.
+  - *Desktop/Tablet:* Expands into a side `NavigationRail` with centered max-width content container.
+- 📊 **Real-Time Survey Insights:** Uses Firebase Firestore streams to push real-time traffic safety statistics directly to users.
+- 🚴 **Interactive Safety Modules:** Categorized learning paths covering:
+  - Pedestrian Crosswalk Rules
+  - Bicycle Safety & Night Reflectors
+  - Two-Wheeler & Pillion Helmet Rules
+  - Car & Bus Boarding Protocols
+- 🏆 **Gamified Quizzes & Achievement Badges:** Test traffic rule knowledge and earn level-based safety badges synced to cloud storage.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack & Architecture
+
+- **Framework:** [Flutter](https://flutter.dev/) (Material 3 UI)
+- **Language:** [Dart](https://dart.dev/)
+- **Cloud Backend:** [Firebase Firestore](https://firebase.google.com/docs/firestore)
+- **Architecture:** Clean Modular Design (`models`, `services`, `screens`, `widgets`, `utils`)
+
+---
+
+## 📁 Project Structure
+
+```text
+lib/
+├── data/              # Mock fallback data and initial app states
+├── models/            # Data models (UserProfile, QuizQuestion, SafetySign, Lesson)
+├── screens/           # Responsive app screens (Home, Learn, Quiz, Signs, Badges)
+├── services/          # Cloud services (DatabaseService for Firebase Firestore)
+├── utils/             # Global themes, constants, and color schemes
+├── widgets/           # Reusable UI components (SurveyCard, CategoryCard, etc.)
+└── main.dart          # Application entry point & Firebase initialization
